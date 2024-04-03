@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdhuvbfufsq8x"]
+
+[ext_resource type="Script" path="res://Scenes/sub_world.gd" id="1_4m1su"]
+[ext_resource type="PackedScene" uid="uid://4jjnkv3pu8lu" path="res://Maps/inner_map.tscn" id="1_fsx87"]
+[ext_resource type="PackedScene" uid="uid://ckor6kmt4h0vh" path="res://Characters/enemy.tscn" id="3_crvhh"]
+
+[node name="SubWorld" type="Node2D"]
+script = ExtResource("1_4m1su")
+
+[node name="InnerMap" parent="." instance=ExtResource("1_fsx87")]
+
+[node name="Enemy" parent="." instance=ExtResource("3_crvhh")]
+position = Vector2(733, 146)

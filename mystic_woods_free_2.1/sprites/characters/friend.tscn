@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://b3eqi1duh7qgr"]
+
+[ext_resource type="Texture2D" uid="uid://befwxx7taoku4" path="res://mystic_woods_free_2.1/sprites/characters/player.png" id="1_mh72h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjbgs"]
+atlas = ExtResource("1_mh72h")
+region = Rect2(0, 53, 48, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqq1j"]
+atlas = ExtResource("1_mh72h")
+region = Rect2(48, 53, 48, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0lqs"]
+atlas = ExtResource("1_mh72h")
+region = Rect2(96, 53, 48, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2k3g"]
+atlas = ExtResource("1_mh72h")
+region = Rect2(144, 53, 48, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6jxb"]
+atlas = ExtResource("1_mh72h")
+region = Rect2(192, 53, 48, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjygp"]
+atlas = ExtResource("1_mh72h")
+region = Rect2(240, 53, 48, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lqmg4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjbgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqq1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0lqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2k3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6jxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjygp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x67pm"]
+radius = 5.38516
+
+[node name="Friend" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_lqmg4")
+autoplay = "default"
+frame_progress = 0.482884
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_x67pm")
